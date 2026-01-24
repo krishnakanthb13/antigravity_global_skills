@@ -1,32 +1,40 @@
 ---
 name: security_audit
-description: Scans the codebase for security vulnerabilities (secrets, injection, dependencies) and creates a SECURITY.md report.
+description: Scans the codebase for OWASP Top 10 vulnerabilities (Secrets, Injection, Auth) and manages SECURITY.md.
 ---
 
-# Security Audit
+# Security Audit (OWASP Standards)
 
-Use this skill to perform a paranoid check on your codebase for security risks.
+Use this skill to perform a "Paranoid Mode" security sweep.
 
 ## Workflow
 
-### 1. Scan (The "Paranoid Eye")
-*   **Secrets**: Look for hardcoded API keys, passwords, tokens, or private keys.
-*   **Injection**: Check for `innerHTML`, raw SQL queries without parameterization, or `eval()` usage.
-*   **Data Handling**: Check how user input is sanitized before use.
-*   **Dependencies**: Check for obviously outdated or insecure patterns in `package.json` or `requirements.txt`.
+### 1. Secrets Detection (Credentials)
+*   **Scan**: Look for API keys, passwords, tokens, or private keys.
+*   **Fix**: Move to `.env`. Add `.env` to `.gitignore`.
 
-### 2. Report Generation (`SECURITY.md`)
-*   Create or update `SECURITY.md` in the project root.
-*   **Structure**:
-    *   **## Security Policy**: How to report vulnerabilities.
-    *   **## Audit Log [Date]**:
-        *   **🟢 Passed**: Checks that returned clean.
-        *   **🔴 Vulnerabilities**: Critical issues found (with file/line references).
-        *   **🟡 Warnings**: Potential risks or best practice violations.
+### 2. Injection Prevention (OWASP #1)
+*   **SQL Injection**: Are queries parameterized? (`$1` vs string concat).
+*   **XSS (Cross-Site Scripting)**:
+    *   JS: Check `innerHTML` or `dangerouslySetInnerHTML`.
+    *   User Input: Is it sanitized/escaped before rendering?
 
-### 3. Remediation
-*   For every 🔴 Vulnerability, provide a specific code snippet or instruction on how to fix it immediately.
-*   For secrets, suggest moving them to `.env` variables.
+### 3. Authentication & Authorization (Broken Access Control)
+*   **Endpoints**: Do sensitive routes (e.g., `/admin`, `/delete`) have middleware checks?
+*   **IDOR**: can User A access User B's data by changing an ID in the URL?
 
-### 4. Verification
-*   Confirm that `SECURITY.md` is updated and accurate.
+### 4. Dependency Analysis (Supply Chain)
+*   **Verify**: Check `package.json` or `requirements.txt` for known vulnerable versions.
+*   **Unused**: Remove unused packages to reduce attack surface.
+
+### 5. Report Generation (`SECURITY.md`)
+Create/Update the report in the root:
+*   **Audit Log**: Date of scan.
+*   **Findings**:
+    *   🔴 **Critical**: Secrets, Injection holes.
+    *   🟡 **Warning**: Outdated deps, missing CSRF tokens.
+    *   🟢 **Passed**: "Auth implemented on /admin".
+
+### 6. Verification
+*   Confirm the fix is applied (e.g., secret is gone from code).
+*   Confirm `SECURITY.md` is updated.

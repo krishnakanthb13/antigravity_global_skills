@@ -1,47 +1,51 @@
 ---
 name: code_review
-description: Comprehensive code review and testing assistant. Focuses on identifying bugs, ensuring code integrity, and detecting errors or potential issues.
+description: Comprehensive code review covering Functionality, Security (OWASP), Performance, and Maintainability. Includes good/bad examples.
 ---
 
-# Code Review & Testing Skill
+# Code Review Checklist
 
-This skill guides you through a systematic process to review code, ensuring high quality, stability, and correctness.
+Use this skill to conduct a thorough, senior-level code review.
 
 ## Workflow
 
-When asked to perform a code review or test, follow these steps:
+### 1. Functionality & Logic (The "Does it Work?" Check)
+*   **Requirements**: Does this solving the stated problem?
+*   **Edge Cases**: Nulls, empty states, limits (min/max).
+*   **Error Handling**: Are errors caught, logged, and handled gracefully (no silent failures)?
 
-### 1. Analysis & Understanding
-*   **Context**: Identify the specific files or code blocks the user wants reviewed.
-*   **Intent**: Understand what the code is supposed to do. If it's not clear, ask for clarification.
+### 2. Security (The OWASP Check)
+*   **Injection**: Check for raw SQL, `innerHTML`, or `eval()`.
+    *   *❌ Bad*: `db.query("SELECT * FROM users WHERE name = " + input)`
+    *   *✅ Good*: `db.query("SELECT * FROM users WHERE name = $1", [input])`
+*   **Secrets**: Ensure NO API keys or passwords are committed. (Use `.env`).
+*   **Auth**: Are permission checks present on sensitive routes?
 
-### 2. Static Analysis & "Linting"
-*   **Syntax Errors**: Check for obvious syntax errors that would prevent the code from running.
-*   **Typos**: Look for variable name typos, missing imports, or undefined symbols.
-*   **Style**: Ensure consistency in formatting (e.g., indentation, naming conventions) matching the existing project style.
+### 3. Performance (The Scalability Check)
+*   **Loops**: No expensive operations inside loops (e.g., DB calls).
+*   **N+1 Problems**: Check for fetching data in a loop instead of batches.
+*   **Memory**: Are listeners/connections cleaned up?
 
-### 3. Logic & Bug Detection (The "Bug Hunt")
-*   **Edge Cases**: Check how the code handles null/undefined values, empty lists/arrays, or unexpected input types.
-*   **Control Flow**: Verify loops (infinite loops?), conditionals (are all cases covered?), and error handling (try-catch blocks).
-*   **Concurrency**: If applicable, check for race conditions or deadlocks.
-*   **Resource Management**: Check for memory leaks, unclosed file handles, or database connections.
+### 4. Code Quality (The Maintainability Check)
+*   **Naming**: Variables should be intentional (`isValid` vs `v`).
+*   **DRY (Don't Repeat Yourself)**: Can distinct logic be extracted to a helper?
+*   **Comments**: Explain *WHY*, not *WHAT*.
 
-### 4. Code Integrity & Security
-*   **Input Validation**: Ensure all external inputs are validated and sanitized.
-*   **Dependency Check**: Are there imports of deprecated or insecure libraries?
-*   **Logic gaps**: Are there "TODO" comments or placeholder logic that shouldn't be in production?
-
-### 5. Validation (Testing)
-*   **Dry Run**: mentally "execute" the code with sample inputs to trace the logic.
-*   **Test Cases**: Propose specific test cases (happy path, edge cases, failure modes) that sould be run.
-*   **Execution**: If permissions allow (and it's safe), use `run_command` to execute existing tests or creates a temporary test script to validate the code.
+### 5. Git & Hygiene
+*   **Commits**: Are they atomic and descriptive?
+*   **Leftovers**: No `console.log` (debug only), commented-out code, or TODOs without an issue tracking them.
 
 ## Output Format
+Structure your review like this:
 
-Present your findings in a clear, structured manner:
+**Summary**: [High level opinion - Ready to Merge / Changes Requested]
 
-1.  **Summary**: A high-level overview of the code quality.
-2.  **Critical Issues**: (If any) bugs that must be fixed immediately.
-3.  **Improvements**: Suggestions for better performance, readability, or best practices.
-4.  **Nitpicks**: Minor style or formatting issues.
-5.  **Test Plan**: A list of recommended tests to verify the fixes.
+| Category | Status | Notes |
+| :--- | :--- | :--- |
+| **Functionality** | ✅ / ⚠️ | ... |
+| **Security** | ✅ / 🔴 | ... |
+| **Performance** | ✅ / ⚠️ | ... |
+
+**Detailed Comments**:
+*   [File/Line]: [Issue description]
+    *   *Suggestion*: [Code snippet check]
