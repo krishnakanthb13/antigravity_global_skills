@@ -29,10 +29,10 @@ Create a markdown entry:
 --- (Horizontal Line separator)
 ```
 
-### 3. Append
-*   Read the target file.
-*   **Prepend**: Insert the new entry at the very top of the file (Reverse Chronological Order), so the latest entry is always first.
-*   **No Erasure**: Ensure existing logs are preserved.
+### 3. Prepend (Context Efficient)
+*   **Zero-Read Policy**: Do NOT read the entire `WORK_LOG.md` file (this saves significant context window tokens).
+*   **Action**: Use a tool like `replace_file_content` (targeting StartLine: 1) or a strategic write to insert the new entry at the very top of the file without loading the previous history into the chat context.
+*   **Safety**: Ensure you do not overwrite or erase old entries. Only the new entry is added to the top (Reverse Chronological Order).
 
 ### 4. Output
 *   Confirm the log has been updated.
