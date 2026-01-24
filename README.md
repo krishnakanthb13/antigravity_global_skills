@@ -13,10 +13,10 @@ This repository contains a collection of custom "skills" for Antigravity, design
 
 2.  **Setup Global Skills**
     *   Navigate to your Antigravity global configuration folder:
-        *   **Windows**: `C:\Users\%USERNAME%\.gemini\antigravity\global_skills\`
-        *   **Mac/Linux**: `~/.gemini/antigravity/global_skills/`
-    *   **Move**: Copy the *contents* of the unzipped folder/repo directly into `global_skills`.
-    *   *Result: You should see folders like `code_review` and `.agent` directly inside `global_skills`.*
+        *   **Windows**: `C:\Users\%USERNAME%\.gemini\antigravity\skills\`
+        *   **Mac/Linux**: `~/.gemini/antigravity/skills/`
+    *   **Move**: Copy the *contents* of the unzipped folder/repo directly into `skills`.
+    *   *Result: You should see folders like `code_review` and `.agent` directly inside `skills`.*
 
 ## �🚀 How to Use
 

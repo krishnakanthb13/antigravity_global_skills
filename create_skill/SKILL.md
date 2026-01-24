@@ -17,7 +17,7 @@ Before creating files, ask the user (or deduce from context):
     *   *Complex*: Needs `scripts/` (for tools) or `references/` (for docs).
 
 ### 2. Create Skill Structure
-Create the directory at `c:/Users/ADMIN/.gemini/antigravity/global_skills/[skill_name]/`.
+Create the directory at `c:/Users/ADMIN/.gemini/antigravity/skills/[skill_name]/`.
 Based on **Complexity**, create subfolders if needed:
 *   `[skill_name]/scripts/` (Executable code)
 *   `[skill_name]/references/` (Documentation)
@@ -42,8 +42,10 @@ Based on **Complexity**, create subfolders if needed:
         ```
 
 ### 4. Register Slash Command (Workflow)
-Create the workflow trigger:
-*   **Target**: `c:/Users/ADMIN/.gemini/antigravity/global_skills/.agent/workflows/[skill_name].md`
+Create the workflow trigger in **both** locations:
+1.  `c:/Users/ADMIN/.gemini/antigravity/skills/.agent/workflows/[skill_name].md`
+2.  `C:\Users\ADMIN\.gemini\antigravity\global_workflows\[skill_name].md`
+
 *   **Content**:
     ```markdown
     ---
@@ -53,7 +55,7 @@ Create the workflow trigger:
     ```
 
 ### 5. Update README.md
-*   **Target**: `c:/Users/ADMIN/.gemini/antigravity/global_skills/README.md`
+*   **Target**: `c:/Users/ADMIN/.gemini/antigravity/skills/README.md`
 *   **Action**: Add the new skill to the `## 🛠️ Available Skills` section.
 *   **Logic**:
     *   Determine the appropriate category (header) for the skill (e.g., Development, Documentation, Strategy).
@@ -63,6 +65,6 @@ Create the workflow trigger:
 
 ### 6. Final Confirmation
 Confirm to the user:
-*   Structure created (with any extra folders, if required).
-*   Slash command `/[skill_name]` ready.
+*   Structure created in `skills` directory.
+*   Slash command `/[skill_name]` ready in both local and global workflow folders.
 *   Documentation file `README.md` updated.
