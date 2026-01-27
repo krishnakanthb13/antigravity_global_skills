@@ -53,6 +53,8 @@ To create a new skill, simply run:
     *   Converts raw concepts into execution plans with schedules, risk analysis, and founder-level filtering.
 *   [**Daily Log**](./daily_log/SKILL.md) (`/daily_log`)
     *   Scans session work and appends a bulleted summary to `WORK_LOG.md`.
+*   [**List Features**](./list_features/SKILL.md) (`/list_features`)
+    *   Generates a comprehensive, prompt-based feature list for recreating the app.
 
 ### Development Actions
 *   [**Code Review**](./code_review/SKILL.md) (`/code_review`)
