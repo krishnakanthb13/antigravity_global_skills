@@ -70,6 +70,10 @@ To create a new skill, simply run:
 *   [**Create Skill**](./create_skill/SKILL.md) (`/create_skill`)
     *   The meta-skill to interactively build new skills and automatically generate their slash commands.
 
+### Design & UI/UX
+*   [**UI/UX Pro Max**](./ui_ux_pro_max/SKILL.md) (`/ui_ux_pro_max`)
+    *   UI/UX design intelligence with searchable database of patterns, styles, and stacks.
+
 ### Quality Assurance (Testing & Security)
 *   [**Scaffold Tests**](./scaffold_tests/SKILL.md) (`/add_tests`)
     *   Generates unit and regression test shells for existing code.
