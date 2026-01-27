@@ -7,6 +7,15 @@ description: Comprehensive workflow to prepare a project for public open-source 
 
 This skill guides you through the process of preparing a project for a public GitHub release.
 
+## Inputs
+*   **GitHub Username**: The target username for links/licensing.
+*   **Project Root**: The directory to prep.
+
+## Tooling Strategy
+*   Use `grep_search` to find placeholders (`YOUR_USERNAME`).
+*   Use `replace_file_content` to update files.
+*   Use `run_command` (curl) to fetch licenses.
+
 ## 0. Code Integrity & Feature Verification
 **Before touching documentation:**
 *   **Verification**: Ensure all major parts of the codebase work together. identify broken flows or unused modules.

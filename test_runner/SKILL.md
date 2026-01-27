@@ -7,6 +7,14 @@ description: Executes the project's test suite, analyzes failures, and provides 
 
 Use this skill to execute tests and understand *why* they might be failing.
 
+## Inputs
+*   **Test Command**: (Optional) Override defaults (e.g., `npm test -- -t "search"`).
+*   **Scope**: Specific file or all tests.
+
+## Tooling Strategy
+*   Use `run_command` to execute tests.
+*   Use `view_file` to read failure logs or source code if tests fail.
+
 ## Workflow
 
 ### 1. Execution

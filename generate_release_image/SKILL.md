@@ -7,6 +7,14 @@ description: create or edit promotional images for releases, adding version numb
 
 This skill helps create visually stunning assets to announce a new software release.
 
+## Inputs
+*   **Version Number**: e.g. v1.0.0.
+*   **Key Features**: List of highlights.
+*   **Source Image**: (Optional) Path to existing image.
+
+## Tooling Strategy
+*   Use `generate_image` to create or edit the asset.
+
 ## Workflow
 
 ### 1. Gather Inputs

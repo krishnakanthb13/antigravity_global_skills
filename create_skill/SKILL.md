@@ -7,6 +7,15 @@ description: Automates the creation of professional-grade Antigravity skills. In
 
 Use this skill to define a new capability for Antigravity. It enforces a professional structure inspired by industry best practices (conciseness, progressive disclosure, and modularity).
 
+## Inputs
+*   **Skill Name**: The name of the skill (snake_case).
+*   **Description**: A short, action-oriented summary of what the skill does.
+*   **Instructions**: The core logic or checklist for the skill.
+
+## Tooling Strategy
+*   Use `write_to_file` to create `SKILL.md` and related files.
+*   Use `run_command` to verify directory creation if not using `write_to_file`'s auto-create.
+
 ## Workflow
 
 ### 1. Design & Strategy

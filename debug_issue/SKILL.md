@@ -8,6 +8,16 @@ description: A strict, scientific debugging protocol (The "Iron Law"). No fixes 
 **Core Principle**: NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST.
 Symptom patching is failure.
 
+## Inputs
+*   **Issue Description**: What is broken?
+*   **Observed Behavior**: What is happening instead?
+*   **Stack Trace/Logs**: (Optional) Error output.
+
+## Tooling Strategy
+*   Use `grep_search` to find error messages in code.
+*   Use `view_file` to inspect logic.
+*   Use `run_command` to run reproduction scripts.
+
 ## Workflow
 
 ### 1. Isolation & Symptom Analysis

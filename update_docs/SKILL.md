@@ -7,6 +7,14 @@ description: Updates standard project documentation files (README, CODE_DOCUMENT
 
 This skill systematically updates the core documentation files of the project.
 
+## Inputs
+*   **Changes**: Summary of what changed (or ask Agent to scan).
+*   **Docs to Update**: README, CODE_DOCUMENTATION, etc.
+
+## Tooling Strategy
+*   Use `view_file` to read current docs.
+*   Use `replace_file_content` to update sections.
+
 ## Workflow
 
 1.  **Analyze Changes**: Briefly scan the recent changes in the codebase to understand what functionality has been added, modified, or removed.

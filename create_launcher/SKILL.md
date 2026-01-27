@@ -7,6 +7,14 @@ description: Generates robust, cross-platform launcher scripts (Windows .bat, Un
 
 Use this skill to generate professional-grade entry point scripts for applications.
 
+## Inputs
+*   **App Name**: Name of the application (for display).
+*   **Entry Point**: Main script to run (e.g., `main.py`, `index.js`).
+
+## Tooling Strategy
+*   Use `write_to_file` to create the scripts.
+*   Use `run_command` with `pwsh` (Windows) or `bash` (Unix) to verify dependency checks if needed.
+
 ## Workflow
 
 ### 1. Requirements Gathering

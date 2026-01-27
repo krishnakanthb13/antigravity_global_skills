@@ -7,6 +7,14 @@ description: Scans the current conversation thread and updates a project work lo
 
 Use this skill to capture the work done in a session/thread and append it to a persistent log file.
 
+## Inputs
+*   **Scope**: The current session context (messages, tools used).
+*   **Work Log Directory**: `work_log` (default).
+
+## Tooling Strategy
+*   Use `list_dir` to find the `work_log` folder.
+*   Use `write_to_file` to create the new log entry.
+
 ## Workflow
 
 ### 1. Identify Target

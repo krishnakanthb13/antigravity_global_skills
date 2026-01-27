@@ -7,6 +7,14 @@ description: Scans the codebase for OWASP Top 10 vulnerabilities (Secrets, Injec
 
 Use this skill to perform a "Paranoid Mode" security sweep.
 
+## Inputs
+*   **Scope**: The directory to audit.
+*   **Depth**: Full scan or quick check.
+
+## Tooling Strategy
+*   Use `grep_search` to find secrets ("API_KEY", "password") and vulnerable patterns (`innerHTML`, `eval`).
+*   Use `view_file` to check auth logic.
+
 ## Workflow
 
 ### 1. Secrets Detection (Credentials)

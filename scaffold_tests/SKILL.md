@@ -7,6 +7,14 @@ description: Generates unit and regression test files for existing code. Creates
 
 Use this skill to automatically generate test suites for your code, ensuring functionality is locked in.
 
+## Inputs
+*   **Target File**: The source code specific to test.
+*   **Test Runner**: (Optional) Jest, Pytest, etc.
+
+## Tooling Strategy
+*   Use `view_file` to analyze the source code.
+*   Use `write_to_file` to create the test file.
+
 ## Workflow
 
 ### 1. Context Analysis

@@ -7,6 +7,15 @@ description: Identifies and refactors monolithic files (>2k lines) into modular,
 
 Use this skill to clean up technical debt by checking for massive source files and logically breaking them down.
 
+## Inputs
+*   **Scope**: The directory to scan.
+*   **Threshold**: Line count limit (Default: 2000).
+
+## Tooling Strategy
+*   Use `list_dir` to see file sizes.
+*   Use `view_file_outline` to understand structure before splitting.
+*   Use `write_to_file` to create new modular files.
+
 ## Workflow
 
 ### 1. Analysis (The "Weigh-in")

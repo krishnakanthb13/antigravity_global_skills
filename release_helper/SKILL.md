@@ -7,6 +7,15 @@ description: Automates release note generation and social media announcements. H
 
 This skill helps you package up a release by generating release notes and social media content.
 
+## Inputs
+*   **Version Number**: (Optional) The target version (e.g. v2.1.0).
+*   **Release Type**: Major/Minor/Patch (if no version provided).
+
+## Tooling Strategy
+*   Use `read_file` to read `RELEASE_NOTES.md`.
+*   Use `run_command` (`git log`) to find recent changes.
+*   Use `replace_file_content` to append notes.
+
 ## Workflow
 
 ### 1. Determine Version Number

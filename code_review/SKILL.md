@@ -7,6 +7,14 @@ description: Comprehensive code review covering Functionality, Security (OWASP),
 
 Use this skill to conduct a thorough, senior-level code review.
 
+## Inputs
+*   **Target**: The file or directory to review.
+*   **Focus**: (Optional) Specific area to check (e.g., security, performance).
+
+## Tooling Strategy
+*   Use `view_file` to read the code.
+*   Use `grep_search` if looking for specific patterns across multiple files.
+
 ## Workflow
 
 ### 1. Functionality & Logic (The "Does it Work?" Check)

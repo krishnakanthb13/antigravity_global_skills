@@ -7,6 +7,15 @@ description: Systematic UI enhancement and verification. Covers styling upgrades
 
 Use this skill when the user wants to improve the appearance/interaction of a UI or ensure that recent edits haven't broken the interface.
 
+## Inputs
+*   **Target Component/Page**: The specific file or UI section to enhance.
+*   **Goals**: Specific improvements (e.g., "Add hover states").
+
+## Tooling Strategy
+*   Use `view_file` to analyze current styles.
+*   Use `replace_file_content` to apply styles.
+*   Use `generate_image` if needing to visualize a new design (optional).
+
 ## Workflow
 
 ### 1. Visual Polish & UX

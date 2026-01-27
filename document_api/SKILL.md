@@ -7,6 +7,14 @@ description: Generates standardized API documentation (OpenAPI/Markdown) for bac
 
 Use this skill to automatically map out and document your server's API surface area.
 
+## Inputs
+*   **Source Code**: The directory or entry point (e.g., `server.js`).
+*   **Format**: Preferred output (Markdown vs Swagger/OpenAPI).
+
+## Tooling Strategy
+*   Use `grep_search` to find route definitions (e.g., `.get(`, `@app.route`).
+*   Use `view_file` to understand request/response schemas.
+
 ## Workflow
 
 ### 1. Analysis

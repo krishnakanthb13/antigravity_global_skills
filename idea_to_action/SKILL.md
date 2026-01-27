@@ -13,6 +13,9 @@ Use this skill when the user has a raw idea and wants to convert it into a concr
 *   **Think Like a Founder**: Focus on ROI, feasibility, and speed to market.
 *   **Reality-First Mode**: Ignore the hype; focus on what is actually buildable today.
 
+## Inputs
+*   **The Idea**: The raw concept or "What if..." statement from the user.
+
 ## Workflow
 
 ### Phase 1: The Founder's Summary
