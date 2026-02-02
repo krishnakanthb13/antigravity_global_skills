@@ -45,14 +45,19 @@ Generate engaging posts for the new release. Create this file if it doesn't exis
     *   Professional but exciting tone.
     *   Focus on the "value add" / problem solved.
     *   Use hashtags (#OpenSource #Dev #Update).
+    *   Linkedin does not support markdown formatting, so use plain text.
+    *   Write multiple lines, each line separated by a newline character.
 *   **Platform 2: Reddit**
-    *   Suggest best sub-reddit to post on - (Eg: r/programming, r/webdev style)
+    *   Suggest best and extensive list of sub-reddits to post on - (Eg: r/programming, r/webdev style).
+    *   Suggest the title of the post.
+    *   Use markdown formatting.
     *   Conversational, "Show don't tell".
     *   Focus on the tech stack or the interesting technical challenge solved.
 *   **Platform 3: X (Twitter)**
     *   Short, crisp, punchy.
     *   Use emojis and threads if the update is large.
     *   Include a call to action (Check it out here!).
+    *   Not more than 280 characters (Standard Users).
 
 ## Output
 *   Confirm the new version number used.
