@@ -14,7 +14,7 @@ This skill helps you package up a release by generating release notes and social
 ## Tooling Strategy
 *   Use `read_file` to read `RELEASE_NOTES.md`.
 *   Use `run_command` (`git log`) to find recent changes.
-*   Use `replace_file_content` to append notes.
+*   Use `replace_file_content` to prepend new entries to the top, ensuring all previous history is preserved (DO NOT replace).
 
 ## Workflow
 
@@ -25,7 +25,7 @@ This skill helps you package up a release by generating release notes and social
     *   **Major**: If the user specifies "major", increment the number to the left (e.g., `v1.0.1` -> `v1.1.0`).
 
 ### 2. Update `RELEASE_NOTES.md`
-Create this file if it doesn't exist, or append new posts to the top.
+Create this file if it doesn't exist. If it exists, ALWAYS prepend new entries to the top to maintain a complete historical log (DO NOT replace).
 
 *   **Analyze Changes**: Look at git history or recent file modifications to understand what changed.
 *   **Format**:
@@ -39,7 +39,7 @@ Create this file if it doesn't exist, or append new posts to the top.
         *   `### 🏗️ Infrastructure & Maintenance`
 
 ### 3. Create `SOCIAL_MEDIA.md`
-Generate engaging posts for the new release. Create this file if it doesn't exist, or append new posts to the top.
+Generate engaging posts for the new release. Create this file if it doesn't exist. If it exists, ALWAYS prepend new posts to the top to maintain a record of past announcements (DO NOT replace).
 
 *   **Platform 1: LinkedIn**
     *   Professional but exciting tone.
@@ -62,3 +62,7 @@ Generate engaging posts for the new release. Create this file if it doesn't exis
 ## Output
 *   Confirm the new version number used.
 *   Show the path to the updated `RELEASE_NOTES.md` and `SOCIAL_MEDIA.md`.
+
+## Critical Rules
+*   **NEVER OVERWRITE**: Always prepend new release information to the top of existing files. Previous release history must be preserved.
+*   **IDEMPOTENCY**: If the version already exists in the file, ask the user if they want to update it or skip.
