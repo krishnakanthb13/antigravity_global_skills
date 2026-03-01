@@ -2,7 +2,9 @@
 
 This repository contains a collection of custom "skills" for Antigravity, designed to automate common development tasks and enforce standardized workflows.
 
-## � Installation
+![Antigravity Skills Architecture](./assets/repo_infographic.png)
+
+##  Installation
 
 1.  **Download / Clone**
     *   Clone this repository:
