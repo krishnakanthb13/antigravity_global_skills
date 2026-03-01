@@ -59,6 +59,8 @@ To create a new skill, simply run:
     *   Generates a comprehensive, prompt-based feature list for recreating the app.
 
 ### Development Actions
+*   [**Software Architecture**](./software_architecture/SKILL.md) (`/software_architecture`)
+    *   Guide for quality-focused software architecture and best practices.
 *   [**Code Review**](./code_review/SKILL.md) (`/code_review`)
     *   Comprehensive code analysis, bug hunting, and integrity testing checklist.
 *   [**Debug Issue**](./debug_issue/SKILL.md) (`/debug_issue`)
@@ -73,10 +75,14 @@ To create a new skill, simply run:
     *   The meta-skill to interactively build new skills and automatically generate their slash commands.
 
 ### Design & UI/UX
+*   [**Frontend Design**](./frontend_design/SKILL.md) (`/frontend_design`)
+    *   Create distinctive, production-grade frontend interfaces with high design quality.
 *   [**UI/UX Pro Max**](./ui_ux_pro_max/SKILL.md) (`/ui_ux_pro_max`)
     *   UI/UX design intelligence with searchable database of patterns, styles, and stacks.
 
 ### Quality Assurance (Testing & Security)
+*   [**Web Performance Optimization**](./web_performance_optimization/SKILL.md) (`/web_performance_optimization`)
+    *   Optimize website and web application performance including loading speed, Core Web Vitals, and bundle size.
 *   [**Scaffold Tests**](./scaffold_tests/SKILL.md) (`/add_tests`)
     *   Generates unit and regression test shells for existing code.
 *   [**Test Runner**](./test_runner/SKILL.md) (`/run_tests`)
