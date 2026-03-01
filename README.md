@@ -93,6 +93,8 @@ To create a new skill, simply run:
     *   Auto-increments versions, writes emoji-rich `RELEASE_NOTES.md`, and drafts social media posts.
 *   [**Generate Release Image**](./generate_release_image/SKILL.md) (`/generate_release_image`)
     *   Creates or edits modern, promotional assets for new versions and saves them to `assets/`.
+*   [**Repo Infographic**](./repo_infographic/SKILL.md) (`/repo_infographic`)
+    *   Generates a clear, themed infographic of the repository and links it in README.md.
 
 ---
 
