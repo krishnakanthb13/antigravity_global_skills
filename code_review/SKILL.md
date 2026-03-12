@@ -34,9 +34,15 @@ Use this skill to conduct a thorough, senior-level code review.
 *   **N+1 Problems**: Check for fetching data in a loop instead of batches.
 *   **Memory**: Are listeners/connections cleaned up?
 
-### 4. Code Quality (The Maintainability Check)
+4. **Code Quality (The Maintainability Check)**
 *   **Naming**: Variables should be intentional (`isValid` vs `v`).
 *   **DRY (Don't Repeat Yourself)**: Can distinct logic be extracted to a helper?
+*   **SOLID Principles**:
+    *   **S**: Does the class/function do only ONE thing?
+    *   **O**: Can we add features without changing this code?
+    *   **L**: Can subclasses be used interchangeably?
+    *   **I**: Are interfaces too bloated?
+    *   **D**: Is it hard-coded to a specific implementation? (Use dependency injection).
 *   **Comments**: Explain *WHY*, not *WHAT*.
 
 ### 5. Git & Hygiene

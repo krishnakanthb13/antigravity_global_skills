@@ -20,8 +20,14 @@ This skill provides guidance for quality-focused software development and archit
    - AVOID generic names (`utils`, `helpers`, `common`, `shared`).
    - USE domain-specific names (`OrderCalculator`, `InvoiceGenerator`).
 6. **Separation of Concerns**:
-   - Do NOT mix business logic with UI components.
-   - Keep database queries out of controllers.
+    - Do NOT mix business logic with UI components.
+    - Keep database queries out of controllers.
+7. **SOLID Principles**:
+   - **S**ingle Responsibility: A class should have one reason to change. Decompose large monoliths.
+   - **O**pen/Closed: Design for extension without modifying existing source code (e.g., plugins, inheritance).
+   - **L**iskov Substitution: Subclasses must be interchangeable with their base classes.
+   - **I**nterface Segregation: Prefer many specific interfaces over one general-purpose interface.
+   - **D**ependency Inversion: Depend on abstractions (interfaces/abstract classes), not concrete implementations.
 
 ## Anti-Patterns to Avoid
 
