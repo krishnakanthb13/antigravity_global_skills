@@ -12,9 +12,9 @@ This skill helps you package up a release by generating release notes and social
 *   **Release Type**: Major/Minor/Patch (if no version provided).
 
 ## Tooling Strategy
-*   Use `read_file` to read `RELEASE_NOTES.md`.
-*   Use `run_command` (`git log`) to find recent changes.
-*   Use `replace_file_content` to prepend new entries to the top, ensuring all previous history is preserved (DO NOT replace).
+*   Use `read_file` to read `RELEASE_NOTES.md` and `SOCIAL_MEDIA.md`.
+*   Use `run_command` (e.g., `git describe --tags --abbrev=0` and `git log <last_release>..HEAD`) to fetch the latest git version, the last git release, and everything that changed from the last release till the latest git commit. Use this as the context to create content.
+*   Use `replace_file_content` to prepend new entries to the VERY TOP, ensuring all previous history is completely untouched (DO NOT replace or modify old entries).
 
 ## Workflow
 
@@ -25,9 +25,9 @@ This skill helps you package up a release by generating release notes and social
     *   **Major**: If the user specifies "major", increment the number to the left (e.g., `v1.0.1` -> `v1.1.0`).
 
 ### 2. Update `RELEASE_NOTES.md`
-Create this file if it doesn't exist. If it exists, ALWAYS prepend new entries to the top to maintain a complete historical log (DO NOT replace).
+Create this file if it doesn't exist. If it exists, ALWAYS prepend new entries to the top to maintain a complete historical log. The old release information MUST remain untouched.
 
-*   **Analyze Changes**: Look at git history or recent file modifications to understand what changed.
+*   **Analyze Changes**: Fetch the latest git version and last git release, and get everything that changed from the last release till the latest git commit to understand what changed and create the content based on that context.
 *   **Format**:
     *   Header: `## [Version] - [Date]`
     *   Style: Use emojis 🚀, one-liners for quick reading, followed by detailed descriptions if necessary.
@@ -39,7 +39,7 @@ Create this file if it doesn't exist. If it exists, ALWAYS prepend new entries t
         *   `### 🏗️ Infrastructure & Maintenance`
 
 ### 3. Create `SOCIAL_MEDIA.md`
-Generate engaging posts for the new release. Create this file if it doesn't exist. If it exists, ALWAYS prepend new posts to the top to maintain a record of past announcements (DO NOT replace).
+Generate engaging posts for the new release. Create this file if it doesn't exist. If it exists, ALWAYS prepend new posts to the top to maintain a record of past announcements. The old social media posts MUST remain untouched.
 
 *   **Platform 1: LinkedIn**
     *   Professional but exciting tone.
