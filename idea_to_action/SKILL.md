@@ -40,3 +40,10 @@ Convert the system view into actionable steps. Provide the following sections:
 4.  **Multilevel Explanations**:
     *   *The Pitch (ELI5)*: How to explain it to a 5-year-old (or an investor).
     *   *The Specs (Technical)*: How to explain it to an engineer.
+
+## Advanced Ideation Framework (Divergent & Convergent)
+If the idea is still vague or needs stress-testing, apply this structured process:
+1. **Understand & Expand (Divergent)**: Restate the idea as a crisp "How Might We" statement. Ask sharpening questions (Who is this for? What does success look like?). Generate variations using lenses like Inversion, Constraint Removal, and 10x Scale.
+2. **Evaluate & Converge**: Cluster the generated ideas into distinct directions. Stress-test each direction against User Value, Feasibility, and Differentiation. 
+3. **Surface Hidden Assumptions**: Explicitly name what you are betting is true, what could kill the idea, and what you are choosing to ignore.
+4. **The "Not Doing" List**: Produce a concrete MVP scope, but more importantly, list what is explicitly NOT being built and why. Focus is about saying no to good ideas.

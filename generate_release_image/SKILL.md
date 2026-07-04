@@ -49,3 +49,9 @@ This skill helps create visually stunning assets to announce a new software rele
 ### 4. Review
 *   Show the generated image to the user.
 *   If text is malformed (common in AI image gen), offer to regenerate or suggest using a dedicated design tool for the final text overlay.
+
+## Advanced Release Image Patterns
+When creating release assets, follow these professional standards:
+*   **Brand Consistency**: Explicitly prompt for the brand's primary colors (e.g., "#0F172A and #3B82F6") and design language if available in `DESIGN_PHILOSOPHY.md`.
+*   **Platform Optimization**: Specify the aspect ratio based on where it will be posted (e.g., 16:9 for LinkedIn/X, 1:1 for generic announcements).
+*   **Focus**: Keep the text minimal. The image should tease the release, not document it.

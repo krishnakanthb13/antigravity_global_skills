@@ -21,6 +21,11 @@ Use this skill to clean up technical debt by checking for massive source files a
 ### 1. Analysis (The "Weigh-in")
 *   **Scan**: Identify files in the relevant scope (HTML, Python, JS, etc.) that exceed **2,000 lines**.
 *   **Assess**: correct functionality is paramount. Does this file *need* to be this big (e.g., a generated asset), or is it just technical debt?
+*   **Comprehensive Tech Debt Scan**: 
+    *   **Code Debt**: Identify duplicated code (copy-paste), high cyclomatic complexity (>10), deeply nested conditionals (>3 levels), and long methods (>50 lines).
+    *   **Architecture Debt**: Look for missing abstractions, circular dependencies, and feature envy.
+    *   **Testing Debt**: Check for untested critical paths or brittle, environment-dependent tests.
+    *   **Impact Assessment**: Quantify the cost (e.g., "Developer velocity is impacted by changing this logic in 5 places").
 
 ### 2. The Refactoring Plan
 Before touching any code, propose a strategy:

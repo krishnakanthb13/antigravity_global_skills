@@ -47,3 +47,9 @@ Create a file that looks like a specification document for an AI or Developer:
 
 ### 5. Final Output
 *   Save the file to `features_listed.md` in the project root.
+
+## Advanced Feature Extraction (Recreation Standards)
+When extracting features, ensure you also capture the underlying mechanics:
+*   **Domain Modeling**: Extract the core data entities and their relationships (e.g., "User has many Orders, Order has many Items").
+*   **Third-Party Dependencies**: Explicitly call out if a feature relies on an external API or specific SDK (e.g., "Payment processing via Stripe API").
+*   **State Management**: Note how global state or complex UI states are handled, as this drastically changes how the app is rebuilt.

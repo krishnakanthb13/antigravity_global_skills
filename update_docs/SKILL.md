@@ -38,3 +38,35 @@ This skill systematically updates the core documentation files of the project.
     *   Ensure the tone reflects the project's core values.
 
 5.  **Review**: Check for consistency across all three documents.
+
+## Standard Documentation Templates
+When creating or heavily updating files, adhere to these structural templates:
+
+### README Structure
+Prioritize sections in this order:
+1. **Title + One-liner**: What is this?
+2. **Quick Start**: How to run in <5 min.
+3. **Features**: What can I do?
+4. **Configuration**: Environment variables and defaults.
+5. **API Reference/Documentation**: Link to details.
+6. **Contributing & License**.
+
+### Code Comment Guidelines (JSDoc/TSDoc)
+Comment the *Why* (business logic), not the *What* (obvious). Document API contracts and complex algorithms.
+```typescript
+/**
+ * Brief description of what the function does.
+ * 
+ * @param paramName - Description of parameter
+ * @returns Description of return value
+ * @throws ErrorType - When this error occurs
+ */
+```
+
+### Changelog Format (Keep a Changelog)
+```markdown
+## [Unreleased]
+### Added
+### Changed
+### Fixed
+```

@@ -39,3 +39,9 @@ Before finalizing any UI code change:
 ### 4. Output
 *   Apply the enhancements.
 *   Report: "Applied [Styles]. Verified [Integrity Checks]. Confirmed no code loss."
+
+## Advanced UI Verification (Pro-Max Guidelines)
+When executing enhancements, enforce these additional standards:
+*   **Accessibility (a11y)**: Ensure all interactive elements have visible focus states for keyboard navigation. Verify semantic HTML and ARIA labels.
+*   **Performance Impact**: Ensure visual enhancements (like heavy animations or background blurs) do not negatively impact Core Web Vitals (e.g., preventing Cumulative Layout Shift).
+*   **Micro-interactions**: Beyond static hover states, add subtle transitions (e.g., `transition-all duration-200`) for premium feel.

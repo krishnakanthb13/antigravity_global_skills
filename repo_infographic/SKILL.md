@@ -25,3 +25,9 @@ Use this skill to create a comprehensive infographic of the current repository.
 4. **Update README.md**:
    - Identify the main `README.md` file of the repository.
    - Append or insert an embedded image link to the generated infographic pointing to the correct relative path in the `assets` folder.
+
+## Advanced Infographic Patterns
+When generating the prompt for the infographic, consider:
+*   **Thematic Storytelling**: The image should tell a story (e.g., "Data Flow", "Component Architecture") rather than just being a random collection of boxes.
+*   **Visual Hierarchy**: Use size, color, and contrast to denote importance (e.g., the core processing engine should be larger and more central than utility scripts).
+*   **Brand Alignment**: If a `DESIGN_PHILOSOPHY.md` exists, ensure the infographic adopts the brand's aesthetic (e.g., "Cyberpunk", "Minimalist Corporate").

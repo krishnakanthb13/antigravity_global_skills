@@ -77,3 +77,10 @@ Confirm to the user:
 *   Structure created in `skills` directory.
 *   Slash command `/[skill_name]` ready in both local and global workflow folders.
 *   Documentation file `README.md` updated.
+
+## Skill Design Principles (Advanced)
+When generating instructions for `SKILL.md`, enforce these agentic design patterns:
+*   **Single Responsibility**: A skill should do exactly one thing exceptionally well. If it's doing two things, it should be two skills.
+*   **Observable Actions**: Favor instructions that produce tangible output (files, git commits, diagrams) rather than just returning text in the chat.
+*   **Fail Gracefully**: Explicitly instruct the skill to stop and ask the user for clarification if required context, files, or permissions are missing, rather than guessing.
+*   **Safety Constraints**: If the skill involves executing code, deleting files, or making network requests, include a clear "Safety & Verification" step.

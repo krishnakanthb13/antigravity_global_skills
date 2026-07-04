@@ -63,3 +63,27 @@ Structure your review like this:
 **Detailed Comments**:
 *   [File/Line]: [Issue description]
     *   *Suggestion*: [Code snippet check]
+
+## Comprehensive Review Guidelines
+
+### 1. The Review Mindset
+- **Goals**: Catch bugs, ensure maintainability, share knowledge, improve architecture.
+- **Not Goals**: Nitpicking formatting, showing off, rewriting to personal preference.
+- **Provide Effective Feedback**: Be specific, actionable, educational, and focused on the code, not the person. Suggest, don't command.
+
+### 2. Differentiate Severity (The Label System)
+Use explicit labels to set expectations:
+- 🔴 `[blocking]`: Must fix before merge (e.g., security flaws, breaking bugs).
+- 🟡 `[important]`: Should fix, discuss if disagree (e.g., architectural issues, N+1 queries).
+- 🟢 `[nit]`: Nice to have, not blocking (e.g., minor naming improvements).
+- 💡 `[suggestion]`: Alternative approach to consider.
+- 📚 `[learning]`: Educational comment, no action needed.
+- 🎉 `[praise]`: Acknowledge good work and solid patterns!
+
+### 3. Review Techniques
+- **The Question Approach**: Ask questions to encourage thinking (e.g., "What happens if `items` is empty?" instead of "This fails if empty").
+- **Collaborative Language**: Use suggestions (e.g., "Would it make sense to extract this?" instead of "Extract this").
+- **Avoid Implementation Detail Reviews**: Ensure tests describe behavior, not internal state (e.g., test what happens on click, not that an internal counter incremented).
+
+### 4. Handling Disagreements
+If there's disagreement: Seek to understand the author's approach, acknowledge valid points, request data (like a benchmark) if needed, and know when to let go if it's working and not critical.

@@ -25,14 +25,20 @@ Use this skill to capture the work done in a session/thread and append it to a p
     *   Decisions made.
 
 ### 2. Format Entry
-Create a markdown entry:
+Create a markdown entry containing not just what was done, but the context around it:
 
 ```markdown
 ## [Date] - [Thread/Topic Name]
 -   **Summary**: [One line summary]
--   **Details**:
+-   **Details (The 'What')**:
     -   [Detailed bullet point]
     -   [Detailed bullet point]
+-   **Decisions (The 'Why')**:
+    -   [Why a specific approach was chosen over alternatives]
+-   **Blockers & Open Questions**:
+    -   [Any lingering issues or technical debt introduced]
+-   **Next Steps**:
+    -   [Actionable items for the next session]
 -   **Link**: [Markdown Link to Thread/Conversation if available]
 ```
 

@@ -71,6 +71,16 @@ Search and replace the following placeholders with **`krishnakanthb13`**:
     4.  Local dev setup.
     5.  Pre-submission checklist (Testing/Validation).
 
+### D. SECURITY.md & CODE_OF_CONDUCT.md
+*   **SECURITY.md**: Provide clear instructions on how to report vulnerabilities privately (e.g., security email) and supported versions.
+*   **CODE_OF_CONDUCT.md**: Adopt a standard code of conduct (e.g., Contributor Covenant) to establish community guidelines.
+
+### E. Issue & PR Templates
+*   Create `.github/ISSUE_TEMPLATE/` folder.
+*   Add `bug_report.md` (Steps to reproduce, Expected vs Actual, Environment).
+*   Add `feature_request.md` (Problem, Proposed Solution, Alternatives).
+*   Create `.github/pull_request_template.md` (Checklist for tests, docs, breaking changes).
+
 ## 4. Final Polish
 *   **Gitignore**: Ensure secrets, logs, and artifacts are ignored.
 *   **References**: Verify all file paths in docs are accurate.

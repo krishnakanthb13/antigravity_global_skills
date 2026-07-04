@@ -36,3 +36,9 @@ Write the test file with three specific sections:
 ### 4. Output
 *   Save the file to a `tests/` directory or alongside the source code (based on project convention).
 *   Prompt the user to run them using `/run_tests`.
+
+## Advanced Testing Patterns
+*   **Test-Driven Development (TDD)**: Write failing test FIRST, implement minimal code to pass, refactor after green. Never write production code without a failing test.
+*   **Behavior-Driven Testing**: Test behavior, not implementation details. Focus on public APIs and business requirements. Use descriptive test names that describe the behavior.
+*   **Factory Pattern**: When scaffolding tests, create data factory functions (e.g., `getMockUser(overrides)`) that provide sensible defaults but allow tests to override specific properties. This keeps tests DRY and maintainable.
+*   **Mocking Strategies**: Use factory functions to mock entire modules or specific hooks when scaffolding tests to isolate the unit under test.

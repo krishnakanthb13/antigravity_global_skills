@@ -34,3 +34,10 @@ Use this skill to execute tests and understand *why* they might be failing.
 
 ### 4. Integrity
 *   Ensure that the testing process didn't leave behind artifacts (temp files, database entries) unless intended for debugging.
+
+## E2E Testing Patterns (Advanced)
+When running or debugging End-to-End (E2E) tests:
+*   **Isolation**: Ensure tests run in complete isolation (dedicated test accounts/data). Do not run destructive tests against production.
+*   **Flakiness**: Debug flaky tests by checking for race conditions, unstable DOM selectors, or implicit waits rather than explicit waits.
+*   **Tracing**: Utilize artifacts (screenshots, video recordings, network traces) captured during CI/CD failures to reconstruct the test state.
+*   **Critical Journeys**: Focus E2E tests on critical user journeys rather than exhaustive edge-case testing (which belongs in unit tests).

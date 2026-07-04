@@ -123,3 +123,9 @@ Available stacks: `html-tailwind`, `react`, `nextjs`, `vue`, `svelte`, `swiftui`
 3. **Combine domains** - Style + Typography + Color = Complete design system
 4. **Always check UX** - Search "animation", "z-index", "accessibility" for common issues
 5. **Use stack flag** - Get implementation-specific best practices
+
+## Handoff & Integration (Advanced)
+After generating a complete design system:
+1. **CSS Variables**: Immediately translate the color palette and typography into standard CSS Custom Properties (e.g., `:root { --primary: #3B82F6; }`) in the project's global stylesheet.
+2. **Component Abstraction**: Identify the recurring patterns (e.g., "Glassmorphism Card") and build a reusable component rather than applying utility classes repeatedly across files.
+3. **Theme Overrides**: If the user project supports dark mode, ensure you generate the inverted palette explicitly under a `@media (prefers-color-scheme: dark)` or `.dark` class block.

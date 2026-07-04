@@ -33,3 +33,42 @@ This skill provides guidance for quality-focused software development and archit
 
 - **NIH (Not Invented Here) Syndrome**: Don't build custom auth when Auth0 exists.
 - **Dumping Grounds**: Don't create `utils.js` or `shared.js` with lots of unrelated functions. Every module should have a single, clear purpose.
+
+## Architecture Decision Records (ADRs)
+
+Document every architectural decision with trade-offs. If making a significant decision, use the following framework:
+
+### ADR Template
+
+```markdown
+# ADR-[XXX]: [Decision Title]
+
+## Status
+Proposed | Accepted | Deprecated | Superseded by [ADR-YYY]
+
+## Context
+- **Problem**: [What problem are we solving?]
+- **Constraints**: [Team size, scale, timeline, budget]
+
+## Options Considered
+| Option | Pros | Cons | Complexity |
+|--------|------|------|------------|
+| Opt A  | ...  | ...  | Low/High   |
+
+## Decision
+[What we chose - be specific]
+
+## Rationale
+[Why - tie to requirements and constraints]
+
+## Consequences
+- **Positive**: [Benefits we gain]
+- **Negative**: [Costs/risks we accept]
+- **Mitigation**: [How we'll address negatives]
+
+## Revisit Trigger
+- [When to reconsider this decision]
+```
+
+### Storage
+Store these records sequentially in `docs/architecture/` (e.g., `adr-001-use-nextjs.md`).

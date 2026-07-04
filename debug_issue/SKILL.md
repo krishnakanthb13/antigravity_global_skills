@@ -50,3 +50,9 @@ If you catch yourself saying these, STOP and return to Step 1:
 *   "I'll just try this quickly..."
 *   "It's probably X..."
 *   "I don't know why this works but it does."
+
+## Advanced Debugging Strategies
+- **Binary Search**: If a long script or a large commit history fails, cut it in half. Test which half fails. Repeat.
+- **Targeted Instrumentation**: Don't just `console.log("here")`. Log state: `console.log({ user: req.user, authHeader: req.headers.authorization })`.
+- **Form Hypotheses & Controlled Experiments**: Before changing code, write down what you think is wrong and what single change will prove it.
+- **Rubber Ducking / Write it Down**: Explain the data flow step-by-step out loud (or in the prompt). The assumption gap often reveals itself.

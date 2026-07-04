@@ -48,3 +48,9 @@ Use this skill to generate professional-grade entry point scripts for applicatio
 ### 4. Output
 *   Generate the scripts in the project root.
 *   Provide a quick Markdown snippet on how to run them.
+
+## Advanced Launcher Patterns
+When generating launchers, consider these enterprise patterns:
+*   **Environment Portability**: Ensure the script runs correctly regardless of the current working directory by resolving paths relative to the script itself (`cd "%~dp0"` on Windows, `cd "$(dirname "$0")"` on Unix).
+*   **Daemonization & Logging**: Offer the option to run the application in the background and pipe stdout/stderr to a dedicated `logs/` directory with timestamped files.
+*   **Health Checks**: After starting the process, optionally ping an endpoint or check a port to confirm the app is actually running before exiting the launcher.

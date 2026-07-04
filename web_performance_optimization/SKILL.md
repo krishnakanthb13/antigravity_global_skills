@@ -32,3 +32,11 @@ Help developers optimize website and web application performance to improve user
   - **LCP** (< 2.5s)
   - **FID** (< 100ms)
   - **CLS** (< 0.1)
+
+## End-to-End Optimization (Advanced)
+If coordinating optimization across the entire stack:
+1. **Performance Profiling & Observability**: Generate flame graphs (CPU) and heap dumps (memory) to identify hot paths. Assess distributed tracing (OpenTelemetry) and APM tool integration.
+2. **Database & Backend**: Analyze slow query logs, create missing indexes, optimize execution plans, implement query result caching (Redis). Fix N+1 queries. Implement pagination and response compression.
+3. **Frontend & CDN/Edge**: Code split, tree shake, lazy load. Configure edge caching (CloudFlare/CloudFront), HTTP/2/3, Brotli compression, and WebP/AVIF images.
+4. **Mobile & PWA**: Implement service workers for offline functionality. Adaptive loading for slow networks. Virtual scrolling for long lists.
+5. **Load Testing & Validation**: Design realistic load scenarios using k6/Gatling to test normal, peak, and stress levels before deploying optimizations.

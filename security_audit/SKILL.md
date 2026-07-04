@@ -46,3 +46,12 @@ Create/Update the report in the root:
 ### 6. Verification
 *   Confirm the fix is applied (e.g., secret is gone from code).
 *   Confirm `SECURITY.md` is updated.
+
+## API Security Best Practices
+When auditing APIs specifically, verify the following patterns:
+- **Authentication**: JWT validation is proper (signature checked, expiry checked).
+- **Rate Limiting**: Public endpoints have rate limiting to prevent abuse and DDoS.
+- **Data Protection**: 
+  - Ensure HTTPS is enforced.
+  - Check that error messages are sanitized (no stack traces or DB schema info leaked to the client).
+- **Validation**: Schema validation on all request bodies, query params, and headers.
